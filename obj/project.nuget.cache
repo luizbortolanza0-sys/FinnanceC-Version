@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "YMzV9FUwHryrDAKQ3q/fLQWLscZNLgD+TsFv0duH3tyhUP4jpWhsB3l4xvoOJ9I6edUBfvm+LIXd8eFlKJ/Bqg==",
+  "success": true,
+  "projectFilePath": "/home/luiz-felipe-cola-bortolanza/Projects/C#/FinnanceC-Version/Finnance.csproj",
+  "expectedPackageFiles": [
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/microsoft.aspnetcore.openapi/8.0.25/microsoft.aspnetcore.openapi.8.0.25.nupkg.sha512",
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "/home/luiz-felipe-cola-bortolanza/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}
