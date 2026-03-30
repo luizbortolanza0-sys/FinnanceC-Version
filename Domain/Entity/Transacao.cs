@@ -1,7 +1,7 @@
 using Finnance.Domain.ValueObject;
 namespace Finnance.Domain.Entity;
 
-class Transacao
+public class Transacao
 {
   public int Id { get; private set; }
   public Guid UserId { get; private set;}
@@ -9,6 +9,8 @@ class Transacao
   public TransitionType Type { get; private set; } 
   public string Category { get; private set; }
   public string Name { get; private set;}
+  
+  public DateTime CreationDateTime {get; private set;}
 
   private Transacao(double _value, TransitionType _type, string _category, string _name, Guid _userId)
   {

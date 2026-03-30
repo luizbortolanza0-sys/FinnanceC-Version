@@ -14,12 +14,11 @@ public class TransitionType
     {
       throw new ArgumentException("O tipo nao pode ser nulo!");
     }
-    if(!_type.Equals("entrada") || !_type.Equals("saida"))
+    if(!_type.Equals("entrada") && !_type.Equals("saida"))
     {
       throw new ArgumentException("O valor deve ser entrada ou saida!");
     }
 
     return new TransitionType(_type);
-    
   }
 }

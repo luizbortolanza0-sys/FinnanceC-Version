@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Finnance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33ff49321b6f481f3f3e6d4656c3e569aa7f97d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce2da9e49a94de5588ca5329c43cd459b8cf9f83")]
 [assembly: System.Reflection.AssemblyProductAttribute("Finnance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Finnance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
