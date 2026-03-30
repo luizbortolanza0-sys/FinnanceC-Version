@@ -1,4 +1,4 @@
-namespace Finnace.Domain.Entity;
+namespace Finnance.Domain.Entity;
 
 public class User
 {

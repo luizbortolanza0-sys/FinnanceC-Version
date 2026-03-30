@@ -1,15 +1,16 @@
-namespace Finnace.Domain.Entity;
+using Finnance.Domain.ValueObject;
+namespace Finnance.Domain.Entity;
 
 class Transacao
 {
   public int Id { get; private set; }
   public Guid UserId { get; private set;}
   public double Value { get ; private set;}
-  public string Type { get; private set; } 
+  public TransitionType Type { get; private set; } 
   public string Category { get; private set; }
   public string Name { get; private set;}
 
-  private Transacao(double _value, string _type, string _category, string _name, Guid _userId)
+  private Transacao(double _value, TransitionType _type, string _category, string _name, Guid _userId)
   {
     UserId = _userId;
     Value =_value;
@@ -18,7 +19,7 @@ class Transacao
     Name = _name;
   }
 
-  public static Transacao Create(double _value, string _type, string _category, string _name, Guid _userId)
+  public static Transacao Create(double _value, TransitionType _type, string _category, string _name, Guid _userId)
   {
     if(_value<= 0)
     {
@@ -27,10 +28,6 @@ class Transacao
     if (string.IsNullOrWhiteSpace(_category))
     {
       throw new ArgumentException("Categoria nao pode ser um campo vazio!");
-    }
-    if (string.IsNullOrWhiteSpace(_type))
-    {
-      throw new ArgumentException("Tipo nao pode ser um campo vazio!");
     }
     if (string.IsNullOrWhiteSpace(_name))
     {
