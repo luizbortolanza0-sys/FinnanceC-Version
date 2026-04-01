@@ -1,6 +1,6 @@
 namespace Finnance.Domain.Entity;
 
-class RefreshToken
+public class RefreshToken
 {
   public Guid Id { get; private set; }
   public Guid UserId { get; private set; }
@@ -13,7 +13,7 @@ class RefreshToken
     Id = Guid.NewGuid();
     UserId = _userId;
     Token = _token;
-    ExpiresIn = DateTime.UtcNow.AddDays(7);;
+    ExpiresIn = DateTime.UtcNow.AddDays(7);
     Used = false;
   }
 
