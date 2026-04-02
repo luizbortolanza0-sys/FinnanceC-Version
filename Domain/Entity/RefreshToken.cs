@@ -36,7 +36,7 @@ public class RefreshToken
     {
       throw new ArgumentException("O refresh token ja foi usado!");
     }
-    if(ExpiresIn < DateTime.UtcNow)
+    if (DateTime.UtcNow > ExpiresIn)
     {
       throw new ArgumentException("O refresh token expirou!");
     }
