@@ -5,7 +5,6 @@ public interface ITransacaoRepository
 {
   Task SaveAsync (Transacao trasacao);
   Task<Transacao?> GetByIdAsync (int transacaoId);
-  Task<IEnumerable<Transacao?>> GetAllAsync ();
-  Task UpdateAsync (Transacao transacao);
+  Task<IReadOnlyList<Transacao>> GetAllAsync();
   Task DeleteAsync (int transacaoId);
 }
