@@ -4,9 +4,9 @@ namespace Finnance.Application.Service.TransacaoService;
 
 public class GetTransacaoService(ITransacaoRepository Repository)
 {
-  public async Task<IReadOnlyList<Transacao>> Execute()
+  public async Task<IReadOnlyList<Transacao>> Execute(Guid userId)
   {
-    var transacao = await Repository.GetAllAsync();
+    var transacao = await Repository.GetAllAsync(userId);
 
     return transacao;
   }

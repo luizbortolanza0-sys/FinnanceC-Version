@@ -11,7 +11,7 @@ public class CreateTransacaoService(ITransacaoRepository Repository)
     Guid _userId)
   {
     var transacao = Transacao.Create(_value, _type, _category, _name, _userId);
-    await Repository.SaveAsync(transacao);
+    await Repository.SaveAsync(transacao, _userId);
     return transacao;
   }
 }

@@ -43,4 +43,5 @@ public class RefreshToken
 
     Used = true;
   }
+  public bool Expired() => DateTime.UtcNow > ExpiresIn;
 }
