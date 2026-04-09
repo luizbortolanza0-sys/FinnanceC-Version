@@ -11,35 +11,35 @@ public class Transacao
   public string Name { get; private set;}
   public DateTime CreationDateTime {get; private set;}
 
-  private Transacao(MoneyValue _value, TransitionType _transitionType, string _category, string _name, Guid _userId)
+  private Transacao(MoneyValue value, TransitionType transitionType, string category, string name, Guid userId)
   {
-    UserId = _userId;
-    Value =_value;
-    Type = _transitionType;
-    Category = _category;
-    Name = _name;
+    UserId = userId;
+    Value =value;
+    Type = transitionType;
+    Category = category;
+    Name = name;
     CreationDateTime = DateTime.UtcNow;
   }
 
-  public static Transacao Create(decimal _value, string _type, string _category, string _name, Guid _userId)
+  public static Transacao Create(decimal value, string type, string category, string name, Guid userId)
   {
     
-    var _money = MoneyValue.Create(_value);
-    var _transitionType =  TransitionType.Create(_type); 
+    var _money = MoneyValue.Create(value);
+    var transitionType =  TransitionType.Create(type); 
 
-    if (string.IsNullOrWhiteSpace(_category))
+    if (string.IsNullOrWhiteSpace(category))
     {
       throw new ArgumentException("Categoria nao pode ser um campo vazio!");
     }
-    if (string.IsNullOrWhiteSpace(_name))
+    if (string.IsNullOrWhiteSpace(name))
     {
       throw new ArgumentException("Nome da transacao nao pode ser um campo vazio!");
     }
-    if(_userId == Guid.Empty)
+    if(userId == Guid.Empty)
     {
       throw new ArgumentException("Id do usuario invalido!");
     }
 
-    return new Transacao(_money ,_transitionType,_category,_name,_userId);
+    return new Transacao(_money ,transitionType,category,name,userId);
   }
 }

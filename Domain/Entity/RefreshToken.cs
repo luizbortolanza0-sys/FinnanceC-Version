@@ -8,26 +8,26 @@ public class RefreshToken
   public DateTime ExpiresIn { get; private set; }
   public bool Used { get; private set; }
 
-  private RefreshToken(Guid _userId, string _token)
+  private RefreshToken(Guid userId, string token)
   {
     Id = Guid.NewGuid();
-    UserId = _userId;
-    Token = _token;
+    UserId = userId;
+    Token = token;
     ExpiresIn = DateTime.UtcNow.AddDays(7);
     Used = false;
   }
 
-  public static RefreshToken Create(Guid _userId, string _token)
+  public static RefreshToken Create(Guid userId, string token)
   {
-    if(_userId == Guid.Empty)
+    if(userId == Guid.Empty)
     {
       throw new ArgumentException("Id do Usuario nao pode ser Nulo");
     }
-    if (string.IsNullOrWhiteSpace(_token))
+    if (string.IsNullOrWhiteSpace(token))
     {
       throw new ArgumentException("O token nao pode nulo ou vazio!");
     }
-    return new RefreshToken(_userId, _token);
+    return new RefreshToken(userId, token);
   }
 
   public void Use()
