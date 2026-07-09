@@ -2,7 +2,7 @@ namespace Finnance.Domain.ValueObject;
 
 public class MoneyValue : IEquatable<MoneyValue>
 {
-  public decimal Amount {get; private set;}
+  public decimal Amount { get; private set; }
 
   private MoneyValue(decimal value)
   {
@@ -19,6 +19,5 @@ public class MoneyValue : IEquatable<MoneyValue>
     return new MoneyValue(value);
   }
   public bool Equals(MoneyValue? money) => money is not null && Amount == money.Amount;
-  
 
 }
